@@ -1,0 +1,199 @@
+<xmp>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>devBakerLayout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap");
+
+h1,
+h5 {
+  font-family: "Edu AU VIC WA NT Pre", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+  color: black;
+}
+
+#apartment {
+  height: 400px;
+  width: 1000px;
+  background-color: #ccc;
+  position: relative;
+  margin: auto;
+  color: white;
+}
+
+#livingRoom {
+  height: 400px;
+  width: 250px;
+  position: absolute;
+  background-color: orange;
+}
+
+#bedroom {
+  height: 250px;
+  width: 280px;
+  background-color: blue;
+  position: absolute;
+  left: 250px;
+}
+
+#bedroomExt {
+  height: 100px;
+  width: 75px;
+  background-color: blue;
+  position: absolute;
+  left: 530px;
+}
+
+#closet {
+  height: 75px;
+  width: 75px;
+  background-color: red;
+  position: absolute;
+  left: 530px;
+  top: 100px;
+}
+
+#wallspace {
+  height: 75px;
+  width: 125px;
+  background-color: black;
+  position: absolute;
+  left: 605px;
+  top: 100px;
+}
+
+#secondwallspace {
+  height: 75px;
+  width: 50px;
+  background-color: black;
+  position: absolute;
+  left: 805px;
+  top: 100px;
+}
+
+#storage {
+  height: 75px;
+  width: 75px;
+  background-color: red;
+  position: absolute;
+  left: 730px;
+  top: 100px;
+}
+
+#laundry {
+  height: 75px;
+  width: 145px;
+  background-color: violet;
+  position: absolute;
+  left: 855px;
+  top: 100px;
+}
+
+#bathroom {
+  height: 100px;
+  width: 395px;
+  background-color: green;
+  position: absolute;
+  left: 605px;
+}
+
+#kitchen {
+  height: 225px;
+  width: 470px;
+  background-color: purple;
+  position: absolute;
+  top: 175px;
+  left: 530px;
+}
+
+#buttonBox {
+  height: 75px;
+  width: 200px;
+  background-color: lightgray;
+  position: absolute;
+  text-align: center;
+  /*  new from codeacademy  */
+  font-weight: 900;
+  top: 300px;
+  left: 290px;
+  color: black;
+}
+
+footer {
+  text-align: center;
+}
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- 
+ author: Carson Kerr
+-->
+
+<h1>Carson's Apartment Layout</h1>
+
+<h5>This is a layout of my college apartment in Florence, AL.</h5>
+
+<div id="apartment">
+
+  <div id="buttonBox">Click to Flip -->
+    <button id="button" class="btn btn-dark mt-2 ms-2">🦭</button>
+  </div>
+
+  <div id="kitchen">Kitchen </div>
+
+  <div id="bathroom">Bathroom</div>
+
+  <div id="laundry">Laundry</div>
+
+  <div id="storage">Storage Closet</div>
+
+  <div id="closet">Bedroom Closet</div>
+
+  <div id="bedroom">Bedroom</div>
+
+  <div id="bedroomExt"></div>
+
+  <div id="livingRoom">Living Room</div>
+
+  <div id="wallspace"></div>
+
+  <div id="secondwallspace"></div>
+
+</div>
+
+<footer>
+  <br><br>
+  <p><a href="https://gist.github.com/user-attachments/assets/9f76f5fe-bdbb-495f-9d1e-e0fa335fe032" target="_blank">Wireframe</a></p>
+</footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js'></script><script  src="./script.js"></script>
+
+<script>
+$(document).ready(function () {
+  console.log("You are reading this from the console!");
+});
+
+$("#button").on("click", function () {
+  let rotation = 0;
+  for (let i = 0; i < 2; i++) {
+    rotation += 90;
+    // found from w3c css() method and template string pages
+    $("#button").css("transform", `rotate(${rotation}deg)`);
+  }
+});
+</script>
+
+</body>
+</html>
+
+</xmp>
