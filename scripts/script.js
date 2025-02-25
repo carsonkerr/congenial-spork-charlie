@@ -1,3 +1,3 @@
 $(document).ready(function () {
-  console.log("have not came up with easter egg yet");
+  console.log("Click the instagram icon to check out the UNA Rugby team's profile!");
  });
